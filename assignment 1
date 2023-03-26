@@ -1,0 +1,253 @@
+#PRINTING SOLID RECTANGLE
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+    
+    int i = 1;
+    while(i<=5-2){
+        int j = 1;
+        while(j<=5){
+            j++;
+            cout<<"*";
+        }
+        cout<<endl;
+        i++;
+                    
+    }
+}
+
+OUTPUT =>
+*****
+*****
+*****
+------------------------------------------------------------------------------------------------------------------------
+#PRINTING SQUARE PATTERN
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int i = 1;
+    while(i<=4){
+        int j = 1;
+        while(j<=4){
+            j++;
+            cout<<"*";
+        }
+        cout<<endl;
+        i++;
+                    
+    }
+}
+OUTPUT =>
+
+****
+****
+****
+****
+----------------------------------------------------------------------------------------------------------------------
+#PRINTING HOLLOW RECTANGLE 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+  int size = 5;
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size; j++) {
+      if (i == 0 || i == size - 1) {
+        cout << "*";
+      }
+      else {
+        if (j == 0 || j == size - 1) {
+          cout << "*";
+        }
+        else {
+          cout << " ";
+        }
+      }
+    }
+    cout << "\n";
+  }
+  return 0;
+}
+
+OUTPUT =>
+*****
+*   *
+*   *
+*   *
+*****
+------------------------------------------------------------------------------------------------------------------------
+#PRINTING HALF PYRAMID
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int size = 6;
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j <= i; j++) {
+      cout << "*";
+    }
+    cout << "\n";
+  }
+  return 0;
+}
+
+OUTPUT =>
+
+*
+**
+***
+****
+*****
+******
+-----------------------------------------------------------------------------------------------------------------------------
+#PRINTING INVERTED HALF PYRAMID
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int size = 6;
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size - i; j++) {
+      cout << "*";
+    }
+    cout << "\n";
+  }
+  return 0;
+}
+
+OUTPUT =>
+
+******
+*****
+****
+***
+**
+*
+--------------------------------------------------------------------------------------------------------------------------------
+#PRINTING NUMERICAL HALF PYRAMID
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int rows = 5;
+    for(int i = 1; i <= rows; ++i) {
+        for(int j = 1; j <= i; ++j) {
+            cout << j << " ";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
+OUTPUT =>
+
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+----------------------------------------------------------------------------------------------------------------------------------
+#PRINTING INVERTED NUMERICAL HALF PYRAMID
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int rows = 5;
+    for(int i = rows; i >= 1; --i) {
+        for(int j = 1; j <= i; ++j) {
+            cout << j << " ";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
+OUTPUT =>
+
+1 2 3 4 5 
+1 2 3 4 
+1 2 3 
+1 2 
+1 
+---------------------------------------------------------------------------------------------------------------------------------------
+#PRINTING FULL PYRAMID
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+    int n=6,j;
+    for (int i =1;i<=n;i++){
+        for (j=1;j<=n;j++){
+            if(j<=n-i){
+                cout<<" ";
+            }
+            else{
+                cout<<"*";
+            }
+        }
+        for(j=i-1;j>=1;j--)
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+        }
+    }
+
+OUTPUT =>
+
+     *
+    ***
+   *****
+  *******
+ *********
+***********
+------------------------------------------------------------------------------------------------------------------------------------------
+#PRINTING INVERTED FULL PYRAMID
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int n = 6;
+
+    for(int i = n; i >= 1; --i) {
+        for(int space = 0; space < n-i; ++space)
+            cout << "  ";
+
+        for(int j = i; j <= 2*i-1; ++j)
+            cout << "* ";
+
+        for(int j = 0; j < i-1; ++j)
+            cout << "* ";
+
+        cout << endl;
+    }
+
+    return 0;
+}
+
+OUTPUT =>
+
+* * * * * * * * * * * 
+  * * * * * * * * * 
+    * * * * * * * 
+      * * * * * 
+        * * * 
+          * 
