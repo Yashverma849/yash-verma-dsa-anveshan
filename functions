@@ -1,0 +1,51 @@
+1. Write a program to print the sum of two numbers entered by user by defining your own function.
+
+    #include<iostream>
+    using namespace std;
+
+    int sum(int x, int y)
+    {
+        return x+y;
+    }
+
+    int main()
+    {
+        cout << sum(2,4) << "\n";
+        return 0;
+    }	
+
+    output->
+    6
+    
+2. Program to Find Largest Number Among Three Numbers
+    
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+    
+        double n1, n2, n3;
+
+        cout << "Enter three numbers: ";
+        cin >> n1 >> n2 >> n3;
+
+
+        if(n1 >= n2 && n1 >= n3)
+            cout << "Largest number: " << n1;
+
+
+        else if(n2 >= n1 && n2 >= n3)
+            cout << "Largest number: " << n2;
+    
+  
+        else 
+            cout << "Largest number: " << n3;
+  
+        return 0;
+     }
+     
+     output ->
+     Enter three numbers: 5 4 8
+     Largest number: 8
+     
+3. 
